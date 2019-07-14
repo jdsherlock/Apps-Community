@@ -12,7 +12,7 @@
     # FACTS #######################################################################
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'organizr'
+        pgrole: 'admin'
         intport: '80'
         extport: '8040'
         image: 'organizrtools/organizr-v2'
