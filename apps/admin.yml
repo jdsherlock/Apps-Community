@@ -13,7 +13,7 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'admin'
-        intport: '80'
+        intport: '8040'
         extport: '8040'
         image: 'organizrtools/organizr-v2'
 
@@ -25,9 +25,9 @@
     - name: 'Adding Traefik'
       set_fact:
         pg_labels:
-          traefik.frontend.auth.forward.address: '{{gauth}}'
           traefik.enable: 'true'
           traefik.port: '{{intport}}'
+          traefik.frontend.auth.forward.address: '{{gauth}}'
           traefik.frontend.rule: 'Host:{{pgrole}}.{{domain.stdout}},{{tldset}}'
 
     - name: 'Setting PG Volumes'
