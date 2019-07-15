@@ -13,7 +13,7 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'admin'
-        intport: '8040'
+        intport: '80'
         extport: '8040'
         image: 'organizrtools/organizr-v2'
 
